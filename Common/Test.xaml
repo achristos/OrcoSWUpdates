@@ -1,99 +1,132 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Test" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Test_1"
- xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
- xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
- xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
- xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
- xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
- xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
- xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
- xmlns:ui="http://schemas.uipath.com/workflow/activities"
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sads sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Data</x:String>
       <x:String>System.Diagnostics</x:String>
       <x:String>System.Drawing</x:String>
+      <x:String>System.Globalization</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Windows.Markup</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Threading</x:String>
-      <x:String>System.Globalization</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Basic" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314.4,88" Id="StartProcess_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314.4,107.2" Id="Click_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314.4,107.2" Id="Click_2" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314.4,135.2" Id="Click_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314.4,107.2" Id="Click_4" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="336.8,829.6" Id="Sequence_8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="376.8,909.6" Id="Test_1" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+  <Sequence DisplayName="Basic" sap2010:WorkflowViewState.IdRef="Sequence_8" sads:DebugSymbol.Symbol="d2JDOlxVc2Vyc1xjaHJpc3RvZm9yb3VcRG9jdW1lbnRzXFVpUGF0aFxIb3NwaXRhbFByb2plY3RzXFVzaW5nIEdscGlcQ2hlY2tTV1VwZGF0ZXNcQ29tbW9uXFRlc3QueGFtbBNDA3AOAgEBRTRFVAIBAkcFR9sBAgERSAVPEAIBDVAFVxACAQlYBV8QAgEFYAVuEAIBA0c8R2QCARNHjgFHpwECARJNmAFN1QQCARBKMUo0AgEPSiRKKAIBDlWYAVXVBAIBDFIxUjQCAQtSJFIoAgEKXZgBXZwCAgEIWjJaNQIBB1okWikCAQZsmAFsqgICAQQ=">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Program Files\Hospital 2003" Name="in_SWDirectory" />
     </Sequence.Variables>
     <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="C:\Program Files\Hospital 2003\payroll" DisplayName="Open file manager" FileName="C:\Windows\explorer.exe" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Left click on the application file" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Left click on the application file" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition OffsetX="46" OffsetY="6" Position="TopLeft" />
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="326359be103166257d9812ec1b1054e1" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='payroll' /&gt;&lt;wnd cls='ShellTabWindowClass' title='payroll' /&gt;&lt;wnd cls='DirectUIHWND' idx='1' /&gt;&lt;wnd aaname='Προβολής φακέλου κελύφους' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Προβολή στοιχείων' cls='DirectUIHWND' /&gt;&lt;ctrl name='Προβολή στοιχείων' role='list' /&gt;&lt;ctrl text='payroll' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8eacfd25-139b-4efc-bcf9-8effb9a47439" InformativeScreenshot="326359be103166257d9812ec1b1054e1" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='payroll' /&gt;&lt;wnd cls='ShellTabWindowClass' title='payroll' /&gt;&lt;wnd cls='DirectUIHWND' idx='1' /&gt;&lt;wnd aaname='Προβολής φακέλου κελύφους' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Προβολή στοιχείων' cls='DirectUIHWND' /&gt;&lt;ctrl name='Προβολή στοιχείων' role='list' /&gt;&lt;ctrl text='payroll' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Right click on the application file" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_RIGHT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Right click on the application file" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_RIGHT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition OffsetX="46" OffsetY="6" Position="TopLeft" />
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="326359be103166257d9812ec1b1054e1" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='payroll' /&gt;&lt;wnd cls='ShellTabWindowClass' title='payroll' /&gt;&lt;wnd cls='DirectUIHWND' idx='1' /&gt;&lt;wnd aaname='Προβολής φακέλου κελύφους' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Προβολή στοιχείων' cls='DirectUIHWND' /&gt;&lt;ctrl name='Προβολή στοιχείων' role='list' /&gt;&lt;ctrl text='payroll' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="28a08846-e9f9-4072-b6b4-7d6029f4e7eb" InformativeScreenshot="326359be103166257d9812ec1b1054e1" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='payroll' /&gt;&lt;wnd cls='ShellTabWindowClass' title='payroll' /&gt;&lt;wnd cls='DirectUIHWND' idx='1' /&gt;&lt;wnd aaname='Προβολής φακέλου κελύφους' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Προβολή στοιχείων' cls='DirectUIHWND' /&gt;&lt;ctrl name='Προβολή στοιχείων' role='list' /&gt;&lt;ctrl text='payroll' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Not trasferable - New selector needed" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Ιδιότητες'" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Not trasferable - New selector needed" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Ιδιότητες'" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition OffsetX="159" OffsetY="5" Position="TopLeft" />
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="282af62adbfe5a4ac6a2abc448913799" Selector="&lt;wnd app='explorer.exe' cls='#32768' /&gt;&lt;ctrl name='Περιβάλλον' role='popup menu' /&gt;&lt;ctrl automationid='30996' /&gt;" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10352531-c88b-4779-9372-6fcfa56a9d2f" InformativeScreenshot="282af62adbfe5a4ac6a2abc448913799" Selector="&lt;wnd app='explorer.exe' cls='#32768' /&gt;&lt;ctrl name='Περιβάλλον' role='popup menu' /&gt;&lt;ctrl automationid='30996' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'page tab  Λεπτομέρειες'" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'page tab  Λεπτομέρειες'" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -105,32 +138,12 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6a1c8c3e020a41bd2d3611583945e9cc" Selector="&lt;wnd app='explorer.exe' cls='#32770' title='Ιδιότητες: *' /&gt;&lt;wnd ctrlid='12320' /&gt;&lt;ctrl name='Λεπτομέρειες' role='page tab' /&gt;" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4270bde0-c5ee-4068-a5a0-95c25220aaa1" InformativeScreenshot="6a1c8c3e020a41bd2d3611583945e9cc" Selector="&lt;wnd app='explorer.exe' cls='#32770' title='Ιδιότητες: *' /&gt;&lt;wnd ctrlid='12320' /&gt;&lt;ctrl name='Λεπτομέρειες' role='page tab' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <sads:DebugSymbol.Symbol>d2JDOlxVc2Vyc1xjaHJpc3RvZm9yb3VcRG9jdW1lbnRzXFVpUGF0aFxIb3NwaXRhbFByb2plY3RzXFVzaW5nIEdscGlcQ2hlY2tTV1VwZGF0ZXNcQ29tbW9uXFRlc3QueGFtbBNDA3AOAgEBRTRFVAIBAkcFR9sBAgERSAVPEAIBDVAFVxACAQlYBV8QAgEFYAVuEAIBA0c8R2QCARNHjgFHpwECARJNmAFN1QQCARBKMUo0AgEPSiRKKAIBDlWYAVXVBAIBDFIxUjQCAQtSJFIoAgEKXZgBXZwCAgEIWjJaNQIBB1okWikCAQZsmAFsqgICAQQ=</sads:DebugSymbol.Symbol>
   </Sequence>
-  <sap2010:WorkflowViewState.ViewStateManager>
-    <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="StartProcess_1" sap:VirtualizedContainerService.HintSize="314.4,88" />
-      <sap2010:ViewStateData Id="Click_1" sap:VirtualizedContainerService.HintSize="314.4,107.2" />
-      <sap2010:ViewStateData Id="Click_2" sap:VirtualizedContainerService.HintSize="314.4,107.2" />
-      <sap2010:ViewStateData Id="Click_3" sap:VirtualizedContainerService.HintSize="314.4,135.2">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Click_4" sap:VirtualizedContainerService.HintSize="314.4,107.2" />
-      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="336.8,829.6">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Test_1" sap:VirtualizedContainerService.HintSize="376.8,909.6" />
-    </sap2010:ViewStateManager>
-  </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

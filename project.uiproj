@@ -1,0 +1,6 @@
+{
+  "Name": "CheckSWUpdates",
+  "ProjectType": "Process",
+  "Description": "Check SW Updates",
+  "MainFile": "Main.xaml"
+}
